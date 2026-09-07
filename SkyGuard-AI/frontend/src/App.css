@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1e293b;
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-size: 0.875rem;
+}
+
+.status-online { color: #4ade80; }
+.status-offline { color: #f87171; }
+
+.grid {
+  display: grid;
+  /* Reduced the min-width from 200px to 180px to ensure all 4 cards fit in one row */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: border-color 0.2s;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card-value {
+  font-size: 1.75rem; /* Slightly smaller to accommodate the units */
+  font-weight: bold;
+  line-height: 1.2; /* Prevents text from squishing vertically if a wrap does occur */
+  white-space: nowrap; /* Forces the number and unit to stay on the same line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-value.anomaly {
+  color: #ef4444;
+}
+
+.chart-container {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  height: 400px;
+}
